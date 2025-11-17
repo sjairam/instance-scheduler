@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { Stack, StackProps } from "aws-cdk-lib";
 import { ArnPrincipal } from "aws-cdk-lib/aws-iam";
@@ -61,8 +60,7 @@ export class SpokeStack extends Stack {
         " service with Decrypt permissions for encrypted EBS volumes." +
         " This allows the scheduler to start EC2 instances with attached encrypted EBS volumes." +
         " provide just (*) to give limited access to all kms keys, leave blank to disable." +
-        " For details on the exact policy created, refer to security section of the implementation guide" +
-        " (https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/)",
+        " For details on the exact policy created, refer to security section of the implementation guide.",
       type: "CommaDelimitedList",
       default: "",
     });

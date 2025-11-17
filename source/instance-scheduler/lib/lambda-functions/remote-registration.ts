@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import {
@@ -32,7 +31,7 @@ export class RemoteRegistrationCustomResource {
     const shouldRegisterSpokeAccountAspect = new ConditionAspect(props.shouldRegisterSpokeAccountCondition);
 
     const role = new Role(scope, "RegisterSpokeAccountCustomResourceLambdaRole", {
-      assumedBy: new ServicePrincipal("lambda.amazonaws.com"),
+      assumedBy: new ServicePrincipal("lambda.aws.com"),
     });
     Aspects.of(role).add(shouldRegisterSpokeAccountAspect);
 

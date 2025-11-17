@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 import re
 from collections.abc import Iterator, Sequence
@@ -226,7 +225,7 @@ class RdsService(Service[RdsInstance]):
             name=MAINTENANCE_SCHEDULE_NAME,
             periods=periods,
             timezone=ZoneInfo("UTC"),  # PreferredMaintenanceWindow field is in utc
-            # https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-instances.html
+            # RDS describe-db-instances API reference
             enforced=True,
         )
 

@@ -5,8 +5,8 @@ name = "instance_scheduler_cli"
 version = "3.0.11"
 description = "Instance Scheduler on AWS CLI"
 license = "Apache-2.0"
-authors = [ "Amazon Web Services" ]
-homepage = "https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/"
+authors = [ "AWS" ]
+homepage = "https://aws.com/solutions/implementations/instance-scheduler-on-aws/"
 readme = "README.md"
 
   [tool.poetry.dependencies]

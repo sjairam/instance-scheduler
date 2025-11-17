@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 """
 Parse a string used in a period definition for a day-of-month, month-of-year, or

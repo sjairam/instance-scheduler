@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { PythonFunction } from "@aws-cdk/aws-lambda-python-alpha";
 import { Duration } from "aws-cdk-lib";

@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { CfnCondition, CfnOutput, CfnParameter, Stack } from "aws-cdk-lib";
 import { Template } from "aws-cdk-lib/assertions";

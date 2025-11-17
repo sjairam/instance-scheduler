@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass
@@ -103,7 +102,7 @@ class EC2SSMMaintenanceWindow:
         return f"{self.window_name}:{self.window_id}"
 
     def _validate(self) -> None:
-        # https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateMaintenanceWindow.html
+        # Systems Manager CreateMaintenanceWindow API reference
         if not fullmatch(r"\d{12}", self.account_id):
             raise EC2SSMMaintenanceWindowValidationError(
                 f"Invalid account id: {self.account_id}"

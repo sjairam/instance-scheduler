@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 """
 The class hierarchy defined in this module is a high-level representation of the fields

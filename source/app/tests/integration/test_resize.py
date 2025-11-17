@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 from mypy_boto3_ec2.literals import InstanceTypeType
 

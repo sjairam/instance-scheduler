@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { Aws, CfnCondition, CustomResource, Duration, Stack } from "aws-cdk-lib";
 import { Table } from "aws-cdk-lib/aws-dynamodb";
@@ -34,7 +33,7 @@ export class MainLambda {
 
   constructor(scope: Stack, props: MainLambdaProps) {
     const role = new Role(scope, "MainLambdaRole", {
-      assumedBy: new ServicePrincipal("lambda.amazonaws.com"),
+      assumedBy: new ServicePrincipal("lambda.aws.com"),
     });
 
     const functionName = Aws.STACK_NAME + "-InstanceSchedulerMain";
@@ -82,7 +81,7 @@ export class MainLambda {
     props.snsErrorReportingTopic.grantPublish(this.lambdaFunction.role);
 
     // basic logging permissions and permission to modify retention policy
-    // https://docs.aws.amazon.com/lambda/latest/operatorguide/access-logs.html
+    // Lambda logging permissions
     this.lambdaFunction.role.addToPrincipalPolicy(
       new PolicyStatement({
         actions: ["logs:CreateLogGroup"],

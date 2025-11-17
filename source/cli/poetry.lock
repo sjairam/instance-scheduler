@@ -2186,7 +2186,7 @@ six = "*"
 [[package]]
 name = "s3transfer"
 version = "0.13.1"
-description = "An Amazon S3 Transfer Manager"
+description = "A S3 Transfer Manager"
 optional = false
 python-versions = ">=3.9"
 files = [

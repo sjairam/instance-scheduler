@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { ArnFormat, Aspects, CfnCondition, Duration, Fn, Stack } from "aws-cdk-lib";
 import { Table } from "aws-cdk-lib/aws-dynamodb";
@@ -33,7 +32,7 @@ export class SpokeRegistrationLambda {
 
   constructor(scope: Stack, props: SpokeRegistrationLambdaProps) {
     const role = new Role(scope, "SpokeRegistrationRole", {
-      assumedBy: new ServicePrincipal("lambda.amazonaws.com"),
+      assumedBy: new ServicePrincipal("lambda.aws.com"),
     });
 
     const functionName = SpokeRegistrationLambda.getFunctionName(props.namespace);

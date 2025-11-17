@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { CfnResource, Stack } from "aws-cdk-lib";
 import { Bucket } from "aws-cdk-lib/aws-s3";

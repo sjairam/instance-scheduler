@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 import json
 import re
@@ -230,7 +229,7 @@ def parse_as_account_ids(props: ServiceSetupResourceProperties) -> list[str]:
 
 def is_org_id(org_id: str) -> bool:
     """
-    Verifies if the ou_id param is a valid ou_id format. https://docs.aws.amazon.com/organizations/latest/APIReference/API_Organization.html
+    Verifies if the ou_id param is a valid ou_id format. Refer to Organizations API documentation.
     :return: the org id or else None
     """
     return bool(re.fullmatch("^o-[a-z0-9]{10,32}$", org_id))

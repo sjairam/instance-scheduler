@@ -81,7 +81,7 @@ exports[`InstanceSchedulerRemoteStack snapshot test 1`] = `
     },
     "KmsKeyArns": {
       "Default": "",
-      "Description": "comma-separated list of kms arns to grant Instance Scheduler kms:CreateGrant permissions to provide the EC2  service with Decrypt permissions for encrypted EBS volumes. This allows the scheduler to start EC2 instances with attached encrypted EBS volumes. provide just (*) to give limited access to all kms keys, leave blank to disable. For details on the exact policy created, refer to security section of the implementation guide (https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/)",
+      "Description": "comma-separated list of kms arns to grant Instance Scheduler kms:CreateGrant permissions to provide the EC2  service with Decrypt permissions for encrypted EBS volumes. This allows the scheduler to start EC2 instances with attached encrypted EBS volumes. provide just (*) to give limited access to all kms keys, leave blank to disable. For details on the exact policy created, refer to security section of the implementation guide ()",
       "Type": "CommaDelimitedList",
     },
     "Namespace": {
@@ -327,7 +327,7 @@ exports[`InstanceSchedulerRemoteStack snapshot test 1`] = `
                   "kms:GrantOperations": false,
                 },
                 "StringLike": {
-                  "kms:ViaService": "ec2.*.amazonaws.com",
+                  "kms:ViaService": "ec2.*.aws.com",
                 },
               },
               "Effect": "Allow",
@@ -613,7 +613,7 @@ exports[`InstanceSchedulerRemoteStack snapshot test 1`] = `
               "Action": "sts:AssumeRole",
               "Effect": "Allow",
               "Principal": {
-                "Service": "lambda.amazonaws.com",
+                "Service": "lambda.aws.com",
               },
             },
           ],

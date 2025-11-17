@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { Aws, CustomResource, Duration, RemovalPolicy } from "aws-cdk-lib";
 import { Effect, Policy, PolicyStatement, Role, ServicePrincipal } from "aws-cdk-lib/aws-iam";
@@ -23,7 +22,7 @@ export class MetricsUuidGenerator {
   constructor(scope: Construct, props: MetricsUuidGeneratorProps) {
     //todo: ensure custom resource depends on the policy that provides logging access
     const role = new Role(scope, "MetricsGeneratorRole", {
-      assumedBy: new ServicePrincipal("lambda.amazonaws.com"),
+      assumedBy: new ServicePrincipal("lambda.aws.com"),
     });
 
     const lambdaResourceProvider = props.factory.createFunction(scope, "MetricsUuidGenerator", {

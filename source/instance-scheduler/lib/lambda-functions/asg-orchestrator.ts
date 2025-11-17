@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { CfnCondition, Duration, Fn, RemovalPolicy } from "aws-cdk-lib";
 import { Table } from "aws-cdk-lib/aws-dynamodb";
@@ -34,7 +33,7 @@ export class AsgOrchestrator {
 
   constructor(scope: Construct, props: AsgOrchestratorProps) {
     const role = new Role(scope, "ASGOrchRole", {
-      assumedBy: new ServicePrincipal("lambda.amazonaws.com"),
+      assumedBy: new ServicePrincipal("lambda.aws.com"),
     });
 
     this.lambdaFunction = props.factory.createFunction(scope, "ASGOrchestrator", {

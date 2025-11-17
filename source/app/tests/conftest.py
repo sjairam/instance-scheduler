@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 from collections.abc import Iterator
 from os import environ
@@ -80,7 +79,7 @@ def get_ami(region: str = "us-east-1") -> str:
         {"Name": "name", "Values": ["al2023-ami-minimal-*-arm64"]},
     ]
     image_id: Optional[str] = None
-    for page in paginator.paginate(Filters=filters, Owners=["amazon"]):
+    for page in paginator.paginate(Filters=filters, Owners=["self"]):
         if page["Images"]:
             image_id = page["Images"][0]["ImageId"]
             break

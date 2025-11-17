@@ -4,8 +4,8 @@
   "description": "helper to update references in cdk generated cfn template and package lambda assets",
   "main": "index.js",
   "author": {
-    "name": "Amazon Web Services",
-    "url": "https://aws.amazon.com/solutions",
+    "name": "AWS",
+    "url": "https://aws.com/solutions",
     "organization": true
   },
   "scripts": {

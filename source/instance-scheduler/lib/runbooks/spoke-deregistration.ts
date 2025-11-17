@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import {
   AutomationDocument,
@@ -23,7 +22,7 @@ export interface SpokeDeregistrationRunbookProperties {
 export class SpokeDeregistrationRunbook {
   constructor(scope: Stack, props: SpokeDeregistrationRunbookProperties) {
     const role = new Role(scope, "SpokeDeregistrationRunbookRole", {
-      assumedBy: new ServicePrincipal("ssm.amazonaws.com"),
+      assumedBy: new ServicePrincipal("ssm.aws.com"),
       description: "Role assumed by SSM Automation to call the spoke registration lambda",
     });
     props.lambdaFunction.grantInvoke(role);

@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { App, Aspects, Stack } from "aws-cdk-lib";
 import { AwsSolutionsChecks } from "cdk-nag";

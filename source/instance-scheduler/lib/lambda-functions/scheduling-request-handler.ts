@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 
 import { Aws, CfnCondition, Duration, RemovalPolicy, Stack } from "aws-cdk-lib";
@@ -54,7 +53,7 @@ export class SchedulingRequestHandlerLambda {
   constructor(scope: Stack, props: SchedulingRequestHandlerProps) {
     const role = new Role(scope, "schedulingRequestHandlerRole", {
       roleName: SchedulingRequestHandlerLambda.roleName(props.namespace),
-      assumedBy: new ServicePrincipal("lambda.amazonaws.com"),
+      assumedBy: new ServicePrincipal("lambda.aws.com"),
     });
 
     this.lambdaFunction = props.factory.createFunction(scope, "schedulingRequestHandlerLambda", {

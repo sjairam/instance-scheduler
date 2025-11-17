@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 """
 Persistence models and stores for data types used by Instance Scheduler.
@@ -16,7 +15,7 @@ Models
 Stores
     Stores implement an interface for list, get, put, and delete as needed for a model.
 
-    Stores are backed by Amazon DynamoDB.
+    Stores are backed by DynamoDB.
 
 Maintenance windows
     Classes for persistence of representations of EC2 maintenance windows as implemented

@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 from collections.abc import Iterator
 from os import scandir
@@ -7,7 +6,6 @@ from pathlib import Path
 optional_shebang = "#!/usr/bin/env python"
 
 header_lines = [
-    "# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.",
     "# SPDX-License-Identifier: Apache-2.0",
 ]
 

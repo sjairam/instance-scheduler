@@ -39,8 +39,8 @@
     "update-deps": "chmod +x ./update-all-dependencies.sh && exec ./update-all-dependencies.sh"
   },
   "author": {
-    "name": "Amazon Web Services",
-    "url": "https://aws.amazon.com/solutions",
+    "name": "AWS",
+    "url": "https://aws.com/solutions",
     "organization": true
   },
   "devDependencies": {

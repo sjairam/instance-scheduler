@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 from instance_scheduler.schedulers.instance_states import InstanceStates
 from tests.integration.helpers.ec2_helpers import (

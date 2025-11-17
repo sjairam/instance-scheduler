@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 import uuid
 from types import TracebackType
@@ -19,7 +18,7 @@ class WriteTransaction:
     This transaction is will be automatically committed when __exit__ is called and may raise
     an exception when doing so
 
-    refer to https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb/client/transact_write_items.html#
+    refer to DynamoDB transact_write_items API documentation
     for details
     """
 

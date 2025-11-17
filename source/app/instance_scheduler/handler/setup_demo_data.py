@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 from instance_scheduler.model.period_definition import PeriodDefinition
 from instance_scheduler.model.period_identifier import PeriodIdentifier

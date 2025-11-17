@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 from unittest.mock import ANY, MagicMock, patch
 
@@ -25,7 +24,7 @@ def test_uses_regional_sts_endpoint(
     mock_client.assert_called_once_with(
         "sts",
         region_name=region_name,
-        endpoint_url=f"https://sts.{region_name}.amazonaws.com",
+        endpoint_url=f"https://sts.{region_name}.aws.com",
         config=ANY,
     )
 
@@ -48,6 +47,6 @@ def test_uses_correct_domain_in_china(
     mock_client.assert_called_once_with(
         "sts",
         region_name=region_name,
-        endpoint_url=f"https://sts.{region_name}.amazonaws.com.cn",
+        endpoint_url=f"https://sts.{region_name}.aws.com.cn",
         config=ANY,
     )

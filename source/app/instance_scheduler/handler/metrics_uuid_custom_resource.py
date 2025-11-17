@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 import uuid
 from typing import TYPE_CHECKING, Any, Mapping, Optional, TypedDict

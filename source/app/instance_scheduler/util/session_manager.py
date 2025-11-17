@@ -1,4 +1,3 @@
-# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 # SPDX-License-Identifier: Apache-2.0
 from dataclasses import dataclass
 from typing import TYPE_CHECKING, Any, Final
@@ -19,11 +18,11 @@ def _sts() -> STSClient:
     session: Final = Session()
     if session.get_partition_for_region(session.region_name) == "aws-cn":
         sts_regional_endpoint = str.format(
-            "https://sts.{}.amazonaws.com.cn", session.region_name
+            "https://sts.{}.aws.com.cn", session.region_name
         )
     else:
         sts_regional_endpoint = str.format(
-            "https://sts.{}.amazonaws.com", session.region_name
+            "https://sts.{}.aws.com", session.region_name
         )
 
     sts_client: STSClient = session.client(

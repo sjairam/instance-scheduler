@@ -1,4 +1,3 @@
-// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: Apache-2.0
 import { Aws, CfnCondition, Duration, Fn, RemovalPolicy } from "aws-cdk-lib";
 import { Table } from "aws-cdk-lib/aws-dynamodb";
@@ -41,7 +40,7 @@ export class AsgHandler {
 
   constructor(scope: Construct, props: AsgHandlerProps) {
     this.role = new Role(scope, "ASGRole", {
-      assumedBy: new ServicePrincipal("lambda.amazonaws.com"),
+      assumedBy: new ServicePrincipal("lambda.aws.com"),
       roleName: AsgHandler.roleName(props.namespace),
     });
 
